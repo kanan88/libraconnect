@@ -8,11 +8,15 @@ Built with Next.js, TypeScript, and Postgres, the University Library Management 
 
 ### Tech Stack:
 
-```Next.js,
-PostgreSQL,
-Upstash,
-ImageKit,
+```
+Next.js 15,
+React 19,
 TypeScript,
+Neon PostgreSQL,
+Drizzle,
+Redis,
+ImageKit,
 Resend,
-Tailwind CSS
+Shadcn,
+TailwindCSS
 ```
