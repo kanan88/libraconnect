@@ -11,18 +11,18 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
 
   if (!session) redirect("/sign-in");
 
-  // Get the user and see if the last activity date is today
-  const user = await db
-    .select()
-    .from(users)
-    .where(eq(users.id, session?.user?.id!))
-    .limit(1);
-
-  if (user[0]?.lastActivityDate === new Date().toISOString().slice(0, 10))
-    return;
-
   after(async () => {
     if (!session?.user?.id) return;
+
+    // Get the user and see if the last activity date is today
+    const user = await db
+      .select()
+      .from(users)
+      .where(eq(users.id, session?.user?.id!))
+      .limit(1);
+
+    if (user[0]?.lastActivityDate === new Date().toISOString().slice(0, 10))
+      return;
 
     await db
       .update(users)
