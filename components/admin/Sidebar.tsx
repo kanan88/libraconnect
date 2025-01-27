@@ -12,7 +12,7 @@ const Sidebar = ({ session }: { session: Session }) => {
   const pathname = usePathname();
 
   return (
-    <div className="admin-sidebar">
+    <aside className="admin-sidebar">
       <div>
         <div className="logo">
           <Image
@@ -73,7 +73,7 @@ const Sidebar = ({ session }: { session: Session }) => {
           <p className="text-light-500 text-xs">{session?.user?.email}</p>
         </div>
       </div>
-    </div>
+    </aside>
   );
 };
 
