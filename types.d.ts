@@ -27,7 +27,7 @@ interface BookParams {
   author: string;
   genre: string;
   rating: number;
-  coverUrl: string;
+  coverImage: string;
   coverColor: string;
   description: string;
   totalCopies: number;
